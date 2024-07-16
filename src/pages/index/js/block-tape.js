@@ -11,7 +11,7 @@ import { tapeCheckbox } from "./checkbox.js";
 const section = document.querySelector("section");
 
 export const block = document.createElement("div");
-block.classList.add("block"); //, 'tape'
+block.classList.add("block", 'tape'); //, 'tape'
 block.id = "tape";
 
 section.append(block);

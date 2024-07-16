@@ -30,6 +30,7 @@
 
     &-footer {
       width: 370px;
+      margin-bottom: 5px
     }
   }
 
@@ -71,8 +72,9 @@
   &__info {
     margin: 0;
     @include font-style($color-grey);
-    margin-top: 10px;
-    margin-right: 80px;
+    // margin-top: 10px;
+    // margin-right: 80px;
+    width: 146px;
   }
 
   &__footer {

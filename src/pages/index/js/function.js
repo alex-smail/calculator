@@ -178,30 +178,6 @@ function allInfoTape() {
   updatePackageInfo(profitTapeKg, "#footer-profit-tape", "#footer-profit-tape");
 }
 
-// let b2 ={
-//   width : $('#width2').val(),              ширина см 
-//   metr : $('#shtuk2').val(),               количество метров 
-//   thickness : $('#thickness2').val(),      толщина мкм
-//   heft : $('#ves2').val(),                 вес кг
-//   self : $('#primePrice_block2').val(),     себестоимость
-//   buy : $('#buyPrice_block2').val()                  продажная 
-// };
-
-
-
-// let Sebe = b2.self * calcVesOne;
-// let Out = b2.buy * calcVesOne;
-// let PlusM = (Out-Sebe) * b2.metr;
-// let PlusKg = (b2.buy - b2.self)*b2.heft;
-// $('.block2_out_param-1').text((calcVesOne*1000).toFixed(2));
-//             $('.block2_out_param-2').text(calcVesAll.toFixed(2));
-//             $('.block2_out_param-3').text(calcPart.toFixed(0));
-
-//             $('.block2_money_out_box-1').text(Sebe.toFixed(2));
-//             $('.block2_money_out_box-2').text(Out.toFixed(2));
-//             $('.block2_money_cash_box-1').text(PlusM.toFixed(2));
-//             $('.block2_money_cash_box-2').text(PlusKg.toFixed(2));
-
 let values = {};
 export function setValues() {
   document.querySelectorAll("input").forEach((input) => {

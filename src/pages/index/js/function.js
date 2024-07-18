@@ -1,4 +1,3 @@
-// import { block, priceMaterials } from "./block-package.js";
 import { f, format } from "./checkbox.js";
 
 export function creatUlElement(name, dsc, id, format) {
@@ -44,7 +43,6 @@ export function createCostElement(name, id, placeholder, format) {
   inputCost.classList.add(`block__${name}`);
   inputCost.placeholder = placeholder;
 
-  // priceMaterials.append(inputCost);
   format === "package-price"
     ? document.querySelector(`#${format}`).append(inputCost)
     : document.querySelector(`#${format}`).append(inputCost);
@@ -85,27 +83,22 @@ export function priceInfo(format, type) {
 
   const costElement = document.createElement("p");
   costElement.classList.add("block__footer_cost", "hidden");
-  // costElement.textContent = '20';
   costElement.id = `footer-cost-${type}`;
 
   const sellingElement = document.createElement("p");
   sellingElement.classList.add("block__footer_selling", "hidden");
-  // sellingElement.textContent = '20';
   sellingElement.id = `footer-selling-${type}`;
 
   footer.append(costElement, sellingElement);
 
   const profitElementTape = document.createElement("p");
   profitElementTape.classList.add("block__footer_profit", "hidden");
-  // profitElementTape.textContent = '20';
   profitElementTape.id = `footer-profit-${type}-m`;
 
   const profitElement = document.createElement("p");
   profitElement.classList.add("block__footer_profit", "hidden");
-  // profitElement.textContent = '20';
   profitElement.id = `footer-profit-${type}`;
 
-  // block.append(footer, profitElement);
   format === "package"
     ? document.querySelector(`#${format}`).append(footer, profitElement)
     : document
@@ -139,8 +132,7 @@ function allInfoPackage() {
   let primePrice = values.cost * onePackage;
   let buyPrice = values.sell * onePackage;
   let profit =
-    (buyPrice - primePrice) * values.circulation ||
-    Number(document.querySelector("#total").textContent);
+    (buyPrice - primePrice) * values.circulation;
   updatePackageInfo(onePackage, "#one", "#ulOne", 1000);
   updatePackageInfo(allPackage, "#all", "#ulAll");
   updatePackageInfo(totalPackage, "#total", "#ulTotal", 1, 0);
@@ -162,8 +154,8 @@ function allInfoTape() {
   let primePriceTape = values.costTape * oneTape;
   let buyPriceTape = values.sellTape * oneTape;
   let profitTape =
-    (buyPriceTape - primePriceTape) * values.circulationTape ||
-    Number(document.querySelector("#total-tape").textContent);
+    (buyPriceTape - primePriceTape) * values.circulationTape;//||
+    //Number(document.querySelector("#total-tape").textContent);
   let profitTapeKg = (values.sellTape - values.costTape) * values.weightTape;
   updatePackageInfo(oneTape, "#one-tape", "#ulOne-tape", 1000);
   updatePackageInfo(allTape, "#all-tape", "#ulAll-tape");

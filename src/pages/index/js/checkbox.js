@@ -3,8 +3,8 @@
 export let f = 0.92;
 
 document
-  .getElementById("toggle-checkbox")
-  .addEventListener("change", function () {
+  .getElementById('toggle-checkbox')
+  .addEventListener('change', function () {
     if (this.checked) {
       f = 0.95;
     } else {
@@ -16,39 +16,39 @@ document
 export let format = 2;
 
 export function tapeCheckbox() {
-  const formatTapeBlock = document.createElement("div");
+  const formatTapeBlock = document.createElement('div');
   formatTapeBlock.classList.add('block__tape');
 
-  const formatTape = document.createElement("p");
-  formatTape.classList.add("block__name", 'block__name-format');
-  formatTape.textContent = "Рукав";
+  const formatTape = document.createElement('p');
+  formatTape.classList.add('block__name', 'block__name-format');
+  formatTape.textContent = 'Рукав';
 
-  const checkboxContainer = document.createElement("div");
-  checkboxContainer.classList.add('block__input')
+  const checkboxContainer = document.createElement('div');
+  checkboxContainer.classList.add('block__input');
 
-  const labelSwitch = document.createElement("label");
-  labelSwitch.classList.add("switch");
+  const labelSwitch = document.createElement('label');
+  labelSwitch.classList.add('switch');
 
-  const inputCheckbox = document.createElement("input");
-  inputCheckbox.id = "format-checkbox";
-  inputCheckbox.type = "checkbox";
+  const inputCheckbox = document.createElement('input');
+  inputCheckbox.id = 'format-checkbox';
+  inputCheckbox.type = 'checkbox';
 
-  const spanSlider = document.createElement("span");
-  spanSlider.classList.add("slider");
+  const spanSlider = document.createElement('span');
+  spanSlider.classList.add('slider');
 
   labelSwitch.append(inputCheckbox, spanSlider);
   checkboxContainer.append(labelSwitch);
-  formatTapeBlock.append(formatTape, checkboxContainer)
+  formatTapeBlock.append(formatTape, checkboxContainer);
 
-  inputCheckbox.addEventListener("change", function () {
-        if (this.checked) {
-          formatTape.textContent = "Полотно";
-          format = 1;
-        } else {
-          formatTape.textContent = "Рукав";
-          format = 2;
-        }
-      });
+  inputCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+      formatTape.textContent = 'Полотно';
+      format = 1;
+    } else {
+      formatTape.textContent = 'Рукав';
+      format = 2;
+    }
+  });
 
   return formatTapeBlock;
 }
@@ -101,7 +101,6 @@ export function tapeCheckbox() {
 //   // Добавление блока в нужное место
 //   const block = document.querySelector('#tape');
 //   block.prepend(formatTapeBlock);
-  
 
 //   // Добавление обработчика событий для чекбокса
 //   inputCheckbox.addEventListener('change', function() {
@@ -112,7 +111,7 @@ export function tapeCheckbox() {
 //       formatTape.textContent = "Рукав";
 //       format = 2;  // Переменная для хранения значения
 //     }
-    
+
 //   });
 
 //   // console.log(format);

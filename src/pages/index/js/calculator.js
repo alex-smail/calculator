@@ -1,6 +1,6 @@
 const section = document.querySelector('section');
 
-const calculator = document.createElement('div');
+export const calculator = document.createElement('div');
 calculator.classList.add('calculator');
 calculator.setAttribute('tabindex', '0'); // Позволяет блоку получить фокус
 
@@ -212,3 +212,4 @@ calculator.addEventListener('blur', () => {
 });
 
 document.addEventListener('keydown', handleKeydown);
+calculator.classList.add('hidden');

@@ -1,5 +1,5 @@
 let board = document.querySelector('#board');
-let squares = 2886;
+let squares = 3886;
 let colors = ['yellow', 'darkblue', 'purple', 'lime', 'white', 'gray', 'gold', 'pink', 'Salmon', 'DeepSkyBlue', 'Teal'];
 for (let i = 0; i < squares; i++) {
   let square = document.createElement('div');

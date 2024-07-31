@@ -59,3 +59,23 @@ checkboxCalc.addEventListener('click', () => {
   calculator.classList.toggle('visible');
   calculator.classList.toggle('hidden');
 });
+
+/*
+checkboxCalc.addEventListener('click', () => {
+  calculator.classList.toggle('visible');
+  calculator.classList.toggle('hidden');
+});
+
+checkboxCalc.addEventListener('click', () => {
+  if (calculator.classList.contains('hidden')) {
+    calculator.classList.remove('hidden', 'animated__reverse');
+    calculator.classList.add('animated');
+} else {
+    calculator.classList.remove('animated');
+    calculator.classList.add('animated__reverse');
+    setTimeout(() => {
+        calculator.classList.add('hidden');
+        calculator.classList.remove('animated__reverse');
+    }, 1000); // время соответствует длительности анимации
+}
+});*/

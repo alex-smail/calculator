@@ -11,9 +11,12 @@
   font-weight: 100;
   border-radius: 8px;
   margin: auto;
-  grid-row: 2 / 3;
-  grid-column: 1 / 4;
+  // grid-row: 2 / 3;
+  // grid-column: 1 / 4;
   pointer-events: visible;
+  cursor: pointer;
+  position: absolute;
+  z-index: 20;
 
   &__info {
     grid-row: 1/2;
@@ -71,3 +74,33 @@
     display: none;
   }
 }
+
+// @keyframes scale {
+//   from {
+//     transform: scale(.01, .1);
+//     margin-top: -570px;
+//   }
+//   to {
+//     transform: scale(1, 1);
+//     margin-top: 0;
+//   }
+// }
+// @keyframes scaleReverse {
+//   from {
+//     transform: scale(1, 1);
+//     margin-top: 0;
+    
+//   }
+//   to {
+//     transform: scale(.01, .1);
+//     margin-top: -570px;
+//   }
+// }
+// .animated {
+//   animation: scale 1s;
+//   z-index: 10;
+// }
+// .animated__reverse {
+//   animation: scaleReverse 1s;
+//   z-index: 10;
+// }

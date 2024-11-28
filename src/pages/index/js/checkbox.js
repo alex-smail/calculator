@@ -53,11 +53,18 @@ export function tapeCheckbox() {
 }
 
 const checkboxCalc = document.querySelector('.checkbox-block__calc');
-const calc = document.querySelector('.calculator');
+const checkboxInfo = document.querySelector('.checkbox-block__info');
+// const calc = document.querySelector('.calculator');
+const blockInfo = document.querySelector('.block-info');
 
 checkboxCalc.addEventListener('click', () => {
   calculator.classList.toggle('visible');
   calculator.classList.toggle('hidden');
+});
+
+checkboxInfo.addEventListener('click', () => {
+  blockInfo.classList.toggle('visible');
+  blockInfo.classList.toggle('hidden');
 });
 
 /*

@@ -1,7 +1,7 @@
 const allBlock = document.querySelector('.section');
 
-const blockInfo = document.createElement('div');
-blockInfo.classList = 'block block-info';
+export const blockInfo = document.createElement('div');
+blockInfo.classList = 'block block-info hidden';
 allBlock.append(blockInfo);
 
 const infoTitle = document.createElement('h2');
@@ -198,8 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // блок с информацией по майке и фасовке
-const blockPVD = document.createElement('div');
-blockPVD.classList = 'block block__PVD';
+export const blockPVD = document.createElement('div');
+blockPVD.classList = 'block block__PVD hidden';
 
 const pvdDsr = document.createElement('h2');
 pvdDsr.classList = 'block__PVD_dsc';
@@ -223,10 +223,10 @@ dsrFooter.innerHTML = `На пакеты от 400 мм
 <br/>500кг - 210`;
 blockPVD.append(pvdDsr, dsrFooter);
 
-const blockPND = document.createElement('div');
-blockPND.classList = 'block block__PND';
+export const blockPND = document.createElement('div');
+blockPND.classList = 'block block__PND hidden';
 
-const pndDsr = document.createElement('h2');
+ const pndDsr = document.createElement('h2');
 pndDsr.classList = 'block__PND_dsc';
 pndDsr.textContent = 'Майка';
 

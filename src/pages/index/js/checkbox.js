@@ -1,4 +1,5 @@
-import { calculator } from "./calculator";
+import { calculator} from "./calculator";
+import { blockInfo, blockPND, blockPVD } from "./block-info";
 export let f = 0.92;
 
 document
@@ -55,7 +56,7 @@ export function tapeCheckbox() {
 const checkboxCalc = document.querySelector('.checkbox-block__calc');
 const checkboxInfo = document.querySelector('.checkbox-block__info');
 // const calc = document.querySelector('.calculator');
-const blockInfo = document.querySelector('.block-info');
+// const blockInfo = document.querySelector('.block-info');
 
 checkboxCalc.addEventListener('click', () => {
   calculator.classList.toggle('visible');
@@ -65,6 +66,10 @@ checkboxCalc.addEventListener('click', () => {
 checkboxInfo.addEventListener('click', () => {
   blockInfo.classList.toggle('visible');
   blockInfo.classList.toggle('hidden');
+  blockPND.classList.toggle('visible');
+  blockPND.classList.toggle('hidden');
+  blockPVD.classList.toggle('visible');
+  blockPVD.classList.toggle('hidden');
 });
 
 /*

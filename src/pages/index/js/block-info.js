@@ -186,18 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
   updatePrices();
 });
 
-
-
-
-
-
-
-
-
-
-
-
 // блок с информацией по майке и фасовке
+
+let pricePackage = 250;
 export const blockPVD = document.createElement('div');
 blockPVD.classList = 'block block__PVD hidden';
 
@@ -213,28 +204,26 @@ dsrFooter.innerHTML = `На пакеты от 400 мм
 <br> ПВД от 50 мкм
 <hr>
 ПНД 
- <br/>150кг - 240 
- <br/>300кг - 230 
- <br/>500кг - 215
+ <br/>150кг - ${pricePackage} 
+ <br/>300кг - ${pricePackage - 10} 
+ <br/>500кг - ${pricePackage - 20}
 <hr>
 ПВД
-<br/>150кг - 230 
-<br/>300кг - 220 
-<br/>500кг - 210`;
+<br/>150кг - ${pricePackage - 10}  
+<br/>300кг - ${pricePackage - 15}  
+<br/>500кг - ${pricePackage - 25} `;
 blockPVD.append(pvdDsr, dsrFooter);
 
 export const blockPND = document.createElement('div');
 blockPND.classList = 'block block__PND hidden';
 
- const pndDsr = document.createElement('h2');
+const pndDsr = document.createElement('h2');
 pndDsr.classList = 'block__PND_dsc';
 pndDsr.textContent = 'Майка';
 
 const dsrFooterPND = document.createElement('p');
 dsrFooterPND.classList = 'block__PND_dsc_footer';
-dsrFooterPND.innerHTML = `Для майки 
-<br>
-<hr>
+dsrFooterPND.innerHTML = `
 24х40
 <br> - мин партия 20тыс
 <hr>
@@ -245,7 +234,11 @@ dsrFooterPND.innerHTML = `Для майки
 <br> - мин партия 5тыс
 <hr>
 <br>
-начальная ценна по таблице от 10тыс!`;
+начальная ценна по таблице от 10тыс!
+<br>
+<br>
+<br>
+<br>`;
 blockPND.append(pndDsr, dsrFooterPND);
 
 allBlock.append(blockPVD, blockPND);

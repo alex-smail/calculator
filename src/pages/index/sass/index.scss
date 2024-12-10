@@ -50,7 +50,7 @@ body {
 /* Плавное появление */
 .visible {
   max-height: 600px; /* Убедитесь, что это значение больше, чем высота блока */
-  opacity: 1;
+  opacity: .85;
   transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
 }
 
@@ -58,4 +58,8 @@ input:focus {
   border-color: $color-orange-light;
   border-radius: 5px;
   outline: 0;
+}
+
+.snowflakes-box {
+  left: 0;
 }

@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // блок с информацией по майке и фасовке
 
-let pricePackage = 250;
+let pricePackage = 260;
 export const blockPVD = document.createElement('div');
 blockPVD.classList = 'block block__PVD hidden';
 
